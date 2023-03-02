@@ -1,0 +1,196 @@
+:root {
+    --clr-dgb: hsl(217, 19%, 35%);
+    --clr-ddb: hsl(214, 17%, 51%);
+    --clr-gb: hsl(212, 23%, 69%);
+    --clr-lgb: hsl(210, 46%, 95%);
+
+    --ff: 'Manrope', sans-serif;
+
+    --fw-nor: 500;
+    --ff-bold: 700;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img,
+picture,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+
+html,
+body {
+    height: 100%;
+}
+
+/*genral styling*/
+
+
+body {
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-lgb);
+    color: var(--clr-dgb);
+    font-family: var(--ff);
+}
+
+.card-cont {
+    background-color: var(--clr-lgb);
+    border-radius: 2%;
+    /* overflow: hidden; */
+    max-width: 455px;
+    margin: 1rem;
+}
+
+/******
+ text 
+******/
+
+.card-title {
+    margin: 0 2rem;
+    padding: 1rem;
+    
+}
+
+.card-des {
+    margin:  0 2rem;
+    padding: 1rem;
+}
+
+/******* 
+info sec
+*******/
+
+.hero {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    margin-bottom: 3rem;
+    position: relative;
+   
+}
+
+#img-avatar {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+
+/********* 
+name and date
+*********/
+
+.flex-group {
+    display: flex;
+    flex-direction: column;
+    font-weight: var(--ff-bold);
+}
+
+.flex-group>span {
+    margin-top: .2rem;
+}
+
+
+/****** 
+share
+******/
+
+.share {
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: 1rem;
+    background-color: var(--clr-lgb);
+    border-radius: 50%;
+    padding: .5rem;
+    z-index: 3;
+}
+
+.share[data-icon="share"]:before {
+    content: "";
+    width: 15px;
+    height: 13px;
+    background-image: url(./images/icon-share.svg);
+}
+
+.spanlink{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:var(--clr-dgb);
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+    border-radius: .875rem;
+}
+
+.spanlink >img{
+    width: 20px;
+    height: 20px;
+    margin: .5rem;
+}
+
+.spanlink > p{
+    margin: 1rem;
+    font-weight: 200;
+color: var(--clr-ddb);
+letter-spacing: 4px;
+}
+
+
+.display{
+    display: none;
+}
+
+@media (min-width:835px) {
+    .card-cont{
+        display: grid;
+        grid-template-columns: 40% 60%;
+        max-width: 835px;
+    }
+
+
+    .text-cont{
+        padding-left: 1rem;
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero{
+        margin: 0  2rem;
+        padding: 0;
+    }
+
+
+    
+.spanlink{
+    position: absolute;
+    top: -3rem;
+    left: 18rem;
+    width: max-content;
+    height: min-content;
+}
+
+.display{
+    display: none;
+}
+
+
+}
